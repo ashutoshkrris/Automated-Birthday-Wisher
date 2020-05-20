@@ -5,7 +5,7 @@ The program uses the following libraries in Python :
 
 1. pandas
 2. datetime
-3. SMTP
+3. smtplib
 
 Make sure you have installed them already.
 Or do this using pip command.
@@ -19,4 +19,4 @@ And the last requirement is to switch on lesser secure apps on gmail.
 
 If you feel any problem,feel free to contact @ ashutoshbritish@gmail.com
 
-Thanks to CodeWithHarry.
+Thanks to CodeWithHarry for the tutorial.
