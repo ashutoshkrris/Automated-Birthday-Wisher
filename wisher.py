@@ -16,13 +16,13 @@ def sendEmail(to,sub,msg):
     print(f"Email sent to {to} with subject {sub} and message : {msg}")
 
 if __name__=="__main__":
-    df = pd.read_excel("BATCH 2016.xlsx")                           #read the excel sheet having all the details
+    df = pd.read_excel("excelsheet.xlsx")                           #read the excel sheet having all the details
     today = datetime.datetime.now().strftime("%d-%m")               #today's date in format : DD-MM
     yearNow = datetime.datetime.now().strftime("%Y")                #current year in format : YY
     writeInd = []                                                   #writeindex list
 
     for index,item in df.iterrows():
-        msg = f"Many Many Happy Returns of the day dear {item['NAME']} !!!!!!\n\n\nThis is an automated email from Ashutosh Krishna sent using Python.\n"
+        msg = f"Many Many Happy Returns of the day dear {item['NAME']} !!!!!!\n\n\nThis is an automated email from ******** sent using Python.\n"
         bday = item['Birthday'].strftime("%d-%m")                   #stripping the birthday in excel sheet as : DD-MM
         if (today==bday) and yearNow not in str(item['Year']):      #condition checking
             sendEmail(item['Email'], "Happy Birthday", msg)         #calling the sendEmail function
@@ -32,4 +32,4 @@ if __name__=="__main__":
         yr = df.loc[i,'Year']
         df.loc[i,'Year'] = str(yr) + ',' + str(yearNow)             #this will record the years in which email has been sent
 
-    df.to_excel('BATCH 2016.xlsx', index=False)                     #saving all the changes into the same excel sheet
+    df.to_excel('excelsheet.xlsx', index=False)                     #saving all the changes into the same excel sheet
