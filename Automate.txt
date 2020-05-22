@@ -6,6 +6,6 @@
 4. Go to Triggers and set the time.
 5. Now write the name
 6. Click on Actions >> New >> Add the path of python.exe in the Program/Script section
-7. Add the path of the wisher.py file in Add Argument part.
+7. Add the path of the wisher.py file in Add Argument part (path should be in double quotes).
 8. In the settings, do the check the option called "Run the task as soon..."
 9. Save everything and you are ready to rock.
