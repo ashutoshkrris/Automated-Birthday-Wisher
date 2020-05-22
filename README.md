@@ -3,7 +3,7 @@
 This is a program which will automatically send birthday wishes to your friends using your gmail credentials.
 The program uses the following libraries in Python :
 
-1. pandas ( * pip install pandas)
+1. pandas ( `pip install pandas`)
 2. datetime
 3. smtplib
 
