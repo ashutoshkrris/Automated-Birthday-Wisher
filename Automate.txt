@@ -1,7 +1,7 @@
 #Process to Automate the program
 
 1. Copy your program path
-2. Search Task Schedular on Windows
+2. Search Task Scheduler on Windows
 3. Click on Create Task
 4. Go to Triggers and set the time.
 5. Now write the name
