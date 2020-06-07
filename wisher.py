@@ -1,10 +1,14 @@
 import pandas as pd
 import datetime
 import smtplib
+import time
+from win10toast import ToastNotifier
 
 #your gmail credentials here
 GMAIL_ID = 'your_email_here'
 GMAIL_PWD = 'your_password_here'
+
+toast = ToastNotifier()
 
 #Function for sending email
 def sendEmail(to,sub,msg):
@@ -14,6 +18,10 @@ def sendEmail(to,sub,msg):
     s.sendmail(GMAIL_ID,to,f"Subject : {sub}\n\n{msg}")             #sending email
     s.quit()                                                        #quit the session
     print(f"Email sent to {to} with subject {sub} and message : {msg}")
+    toast.show_toast("Email Sent!" , f"{name} was sent e-mail", threaded=True, icon_path=None, duration=6)
+
+    while toast.notification_active():
+        time.sleep(0.1)
 
 if __name__=="__main__":
     df = pd.read_excel("excelsheet.xlsx")                           #read the excel sheet having all the details
