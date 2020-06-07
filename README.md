@@ -6,7 +6,7 @@ The program uses the following libraries in Python :
 1. pandas ( `pip install pandas`)
 2. datetime
 3. smtplib
-4. win10toast (`pip install win10toast)
+4. win10toast (`pip install win10toast`)
 
 Make sure you have installed them already.
 Or do this using above commands.
